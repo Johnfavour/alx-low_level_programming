@@ -5,15 +5,14 @@
  * Description: prints
  * Return: void
  */
-void void print_most_numbers(void)
+void print_most_numbers(void)
 {
-	char c;
+	char i;
 
-	for (c = '0'; c <= '9'; c++)
+	for (i = '0'; i <= '9'; ++i)
 	{
-		if (!(c == '2' || c == '4'))
-		{
-		_putchar(c);
-		}
-		_putchar('\n');
+		if (i != '2' && i != '4')
+			putchar(i);
+	}
+	putchar('\n');
 }
