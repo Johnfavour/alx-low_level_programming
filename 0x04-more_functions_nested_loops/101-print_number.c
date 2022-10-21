@@ -10,18 +10,13 @@ void print_number(int n)
 {
 	unsigned int m;
 
-	if (n >= 0)
+	m = n;
+	if (n < 0)
 	{
-		if (n >= 10)
-			print_number(n / 10);
-		putchar('0' + n % 10);
+		putchar(45);
+		m = -n;
 	}
-	else
-	{
-		putchar('-');
-		m = -1 * n;
-		if (m >= 10)
-			print_number(m / 10);
-		putchar('0' + m % 10);
-	}
+	if (m / 10)
+		print_number(m / 10);
+	putchar((m % 10) + '0');
 }
