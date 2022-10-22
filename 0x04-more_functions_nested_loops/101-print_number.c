@@ -9,14 +9,38 @@
 void print_number(int n)
 {
 	unsigned int m;
+	int a, b;
 
-	m = n;
-	if (n < 0)
+	b = 10;
+
+	if (n < 10 && n >= 0)
 	{
-		putchar(45);
-		m = -n;
+		putchar(n + '0');
 	}
-	if (m / 10)
-		print_number(m / 10);
-	putchar((m % 10) + '0');
+	else if (n > -10 && n < 0)
+	{
+		n = n - 2 * n;
+		putchar('-');
+		putchar(n + '0');
+	}
+	else
+	{
+		if (n < 0)
+		{
+			n = n * -1;
+			putchar('-');
+		}
+		m = n;
+		while (m / b > 9)
+		{
+			b = b * 10;
+		}
+		while (b > 0)
+		{
+			a = m / b;
+			m = m % b;
+			putchar(a + '0');
+			b = b / 10;
+		}
+	}
 }
