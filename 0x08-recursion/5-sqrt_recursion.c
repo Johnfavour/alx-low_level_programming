@@ -1,28 +1,28 @@
 #include "main.h"
 /**
- *comparar - function that returns the power of number
- *@n: original number
- *@y: counter to compare multiplication
- *Return: square root
+ * comparar - function that returns the power of number
+ * @n: original number
+ * @y: counter to compare multiplication
+ * Return: square root
  */
 int comparar(int n, int y)
 {
-	if (a* a == n)
+	if (y * y == n)
 	{
-		return (a);
+		return (y);
 	}
-	else if (a * a > n)
+	else if (y * y > n)
 	{
 		return (-1);
 	}
-	return (comparar(n, a + 1));
+	return (comparar(n, y + 1));
 }
 /**
-*_sqrt_recursion - function that returns the power of number
-*@n: number
-*Return: the natural square root
-*/			
+ * _sqrt_recursion - function that returns the power of number
+ * @n: number
+ * Return: the natural square root
+ */
 int _sqrt_recursion(int n)
 {
-	return (comparon(n, 1));
+	return (comparar(n, 1));
 }
